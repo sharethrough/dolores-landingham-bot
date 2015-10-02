@@ -53,7 +53,7 @@ If you have previously run a project on a different port, a `.foreman` file
 may be generated at the root of your directory. If so, make sure that this 
 file is set to port `5000` or you will be unable to authenticate locally with MyUSA.
 
-### <a name="required-keys">Required Keys</a>
+### Required Keys
 
 The setup script creates a `.env` file with a dummy environment configuration variables.
 If you are internal to 18F and would like access to these configs,
