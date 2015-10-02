@@ -65,15 +65,15 @@ instances: `dolores-app` and `dolores-staging`.
 Test your changes by pushing to `dolores-staging` before pushing to the 
 `dolores-app` instance.
 
-`cf push <app-name>`
+`cf push <app-instance-name>`
 
 New migrations will be run automatically. See the [manifest](manifest.yml) for
 more details on the Cloud Foundry setup.
 
 To see existing environment variables:
 
-`cf env <app-name>`
+`cf env <app-instance-name>`
 
 To set or change the value of an environment variable:
 
-`cf set-env <app-name> <env-name> <env-value>`
+`cf set-env <app-instance-name> <env-name> <env-value>`
