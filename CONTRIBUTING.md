@@ -63,7 +63,6 @@ you can contact Jessie Young. Otherwise, you can create a Slack bot
 ### Authentication
 
 You will need to be on the developer list to authenticate locally via MyUSA.
-
 If you are internal to 18F, contact Brian Hedberg to be added to the developer list.
 If you are on the list, `dolores-local` will be one of your [Authorized Applications](https://alpha.my.usa.gov/authorizations) 
 on MyUSA.
