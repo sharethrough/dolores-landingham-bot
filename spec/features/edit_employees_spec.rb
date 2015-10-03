@@ -2,8 +2,8 @@ require "rails_helper"
 
 feature "Edit employees" do
   scenario "from list of employees" do
-    old_slack_username = "old_name_333"
-    new_slack_username = "new_name_555"
+    old_slack_username = "testusername"
+    new_slack_username = "testusername3"
     create(:employee, slack_username: old_slack_username)
 
     login_with_oauth

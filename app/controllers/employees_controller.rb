@@ -6,6 +6,12 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
 
+    unless EmployeeFinder.new.employee_exists?(@employee.slack_username)
+      flash.now[:error] = "\"#{@employee.slack_username}\" is not a valid employee (that username was not found)."
+      render action: :new
+      return
+    end
+
     if @employee.save
       flash[:notice] = "Thanks for adding #{@employee.slack_username}"
       redirect_to root_path
@@ -25,6 +31,12 @@ class EmployeesController < ApplicationController
 
   def update
     @employee = Employee.find(params[:id])
+
+    unless EmployeeFinder.new.employee_exists?(@employee.slack_username)
+      flash.now[:error] = "\"#{@employee.slack_username}\" is not a valid employee (that username was not found)."
+      render action: :edit
+      return
+    end
 
     if @employee.update(employee_params)
       flash[:notice] = "Employee updated successfully"

@@ -5,7 +5,7 @@ feature "Create employees" do
     login_with_oauth
     visit root_path
 
-    username = "test_slack_username_3000"
+    username = "testusername2"
     fill_in "Slack username", with: username
     select "2015", from: "employee_started_on_1i"
     select "June", from: "employee_started_on_2i"

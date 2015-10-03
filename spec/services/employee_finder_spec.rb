@@ -5,12 +5,12 @@ describe EmployeeFinder do
     it "returns true if an employee exists in Slack" do
       employee = create(:employee)
       client_double = Slack::Web::Client.new
-      slack_user_finder_double = double(users_exists?: true)
+      user_exists_double = double(user_exists?: true)
 
       allow(Slack::Web::Client).to receive(:new).and_return(client_double)
       allow(SlackUserFinder).
         to receive(:new).with(employee.slack_username, client_double).
-        and_return(slack_user_finder_double)
+        and_return(user_exists_double)
 
       employee_exists = EmployeeFinder.new.employee_exists?(employee.slack_username)
 
@@ -20,12 +20,12 @@ describe EmployeeFinder do
     it "returns false if an employee does not exist in Slack" do
       employee = create(:employee)
       client_double = Slack::Web::Client.new
-      slack_user_finder_double = double(users_exists?: false)
+      user_exists_double = double(user_exists?: false)
 
       allow(Slack::Web::Client).to receive(:new).and_return(client_double)
       allow(SlackUserFinder).
         to receive(:new).with(employee.slack_username, client_double).
-        and_return(slack_user_finder_double)
+        and_return(user_exists_double)
 
       employee_exists = EmployeeFinder.new.employee_exists?(employee.slack_username)
 
