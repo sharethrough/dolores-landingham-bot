@@ -6,13 +6,10 @@ class EmployeesController < ApplicationController
   def create
     @employee = Employee.new(employee_params)
 
-    unless EmployeeFinder.new.employee_exists?(@employee.slack_username)
-      flash.now[:error] = "\"#{@employee.slack_username}\" is not a valid employee (that username was not found)."
+    if unknown_employee(@employee.slack_username)
+      flash.now[:error] = "There is not a slack user with the username \"#{@employee.slack_username}\" in your organization."
       render action: :new
-      return
-    end
-
-    if @employee.save
+    elsif @employee.save
       flash[:notice] = "Thanks for adding #{@employee.slack_username}"
       redirect_to root_path
     else
@@ -32,13 +29,10 @@ class EmployeesController < ApplicationController
   def update
     @employee = Employee.find(params[:id])
 
-    unless EmployeeFinder.new.employee_exists?(@employee.slack_username)
-      flash.now[:error] = "\"#{@employee.slack_username}\" is not a valid employee (that username was not found)."
+    if unknown_employee(params[:employee][:slack_username])
+      flash.now[:error] = "There is not a slack user with the username \"#{params[:employee][:slack_username]}\" in your organization."
       render action: :edit
-      return
-    end
-
-    if @employee.update(employee_params)
+    elsif @employee.update(employee_params)
       flash[:notice] = "Employee updated successfully"
       redirect_to employees_path
     else
@@ -51,5 +45,9 @@ class EmployeesController < ApplicationController
 
   def employee_params
     params.require(:employee).permit(:slack_username, :started_on)
+  end
+
+  def unknown_employee(slack_username)
+    !EmployeeFinder.new.employee_exists?(slack_username)
   end
 end

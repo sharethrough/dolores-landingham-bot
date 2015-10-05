@@ -5,23 +5,23 @@ describe SlackUserFinder do
     it "returns true if a user is found" do
       slack_username_from_fixture = "testusername"
 
-      user_exists = SlackUserFinder.new(
+      user = SlackUserFinder.new(
         slack_username_from_fixture,
         Slack::Web::Client.new
-      ).user_exists?
+      )
 
-      expect(user_exists).to be true
+      expect(user).to be_user_exists
     end
 
     it "returns false if a user was not found" do
       fake_slack_user_name = "testusernamethatdoesnotexist"
 
-      user_exists = SlackUserFinder.new(
+      user = SlackUserFinder.new(
         fake_slack_user_name,
         Slack::Web::Client.new
-      ).user_exists?
+      )
 
-      expect(user_exists).to be false
+      expect(user).not_to be_user_exists
     end
   end
 end
