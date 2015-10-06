@@ -1,7 +1,7 @@
 require "rails_helper"
 
 describe SlackUserFinder do
-  describe "#user_exists?" do
+  describe "#existing_user?" do
     it "returns true if a user is found" do
       slack_username_from_fixture = "testusername"
 
@@ -10,7 +10,7 @@ describe SlackUserFinder do
         Slack::Web::Client.new
       )
 
-      expect(user).to be_user_exists
+      expect(user).to be_existing_user
     end
 
     it "returns false if a user was not found" do
@@ -21,7 +21,7 @@ describe SlackUserFinder do
         Slack::Web::Client.new
       )
 
-      expect(user).not_to be_user_exists
+      expect(user).not_to be_existing_user
     end
   end
 end

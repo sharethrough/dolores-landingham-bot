@@ -48,6 +48,6 @@ class EmployeesController < ApplicationController
   end
 
   def unknown_employee(slack_username)
-    !EmployeeFinder.new.employee_exists?(slack_username)
+    !EmployeeFinder.new(slack_username).existing_employee?
   end
 end

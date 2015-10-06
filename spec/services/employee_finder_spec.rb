@@ -5,31 +5,31 @@ describe EmployeeFinder do
     it "returns true if an employee exists in Slack" do
       employee = create(:employee)
       client_double = Slack::Web::Client.new
-      user_exists_double = double(user_exists?: true)
+      existing_user_double = double(existing_user?: true)
 
       allow(Slack::Web::Client).to receive(:new).and_return(client_double)
       allow(SlackUserFinder).
         to receive(:new).with(employee.slack_username, client_double).
-        and_return(user_exists_double)
+        and_return(existing_user_double)
 
-      employee_exists = EmployeeFinder.new.employee_exists?(employee.slack_username)
+      employee_finder = EmployeeFinder.new(employee.slack_username)
 
-      expect(employee_exists).to be true
+      expect(employee_finder).to be_existing_employee
     end
 
     it "returns false if an employee does not exist in Slack" do
       employee = create(:employee)
       client_double = Slack::Web::Client.new
-      user_exists_double = double(user_exists?: false)
+      existing_user_double = double(existing_user?: false)
 
       allow(Slack::Web::Client).to receive(:new).and_return(client_double)
       allow(SlackUserFinder).
         to receive(:new).with(employee.slack_username, client_double).
-        and_return(user_exists_double)
+        and_return(existing_user_double)
 
-      employee_exists = EmployeeFinder.new.employee_exists?(employee.slack_username)
+      employee_finder = EmployeeFinder.new(employee.slack_username)
 
-      expect(employee_exists).to be false
+      expect(employee_finder).not_to be_existing_employee
     end
   end
 end

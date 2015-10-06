@@ -1,5 +1,5 @@
 class SlackUserFinder < SlackApiWrapper
-  def user_exists?
+  def existing_user?
     !slack_user.nil?
   end
 end

@@ -1,12 +1,13 @@
 require "slack-ruby-client"
 
 class EmployeeFinder
-  def initialize
+  def initialize(slack_username)
+    @slack_username = slack_username
     configure_slack
   end
 
-  def employee_exists?(slack_username)
-    SlackUserFinder.new(slack_username, client).user_exists?
+  def existing_employee?
+    SlackUserFinder.new(@slack_username, client).existing_user?
   end
 
   private
