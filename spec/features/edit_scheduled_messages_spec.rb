@@ -26,7 +26,7 @@ feature "Edit scheduled messages" do
     visit scheduled_messages_path
     click_on "Edit"
     fill_in "Title", with: new_title
-    fill_in "Tags (seperated by commas)", with: tags
+    fill_in "Tags (separated by commas)", with: tags
     click_on "Update Scheduled message"
 
     expect(page).to have_content "Scheduled message updated successfully"
