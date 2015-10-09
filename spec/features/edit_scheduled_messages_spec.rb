@@ -4,7 +4,7 @@ feature "Edit scheduled messages" do
   scenario "successfully" do
     old_title = "Old title"
     new_title = "New title"
-    tags = "tag_one tag_two tag_three"
+    tags = "tag_one, tag_two, tag_three"
     create(:scheduled_message, title: old_title)
 
     login_with_oauth
