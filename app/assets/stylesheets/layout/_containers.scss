@@ -1,0 +1,57 @@
+.container {
+  @include outer-container;
+}
+
+.container-banner {
+	@extend .container;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+	height: 100%;
+	overflow-y: auto;
+	padding: $base-padding;
+	position: fixed;
+	width: 25%;
+=======
+	// @include span-columns(3);
+	// @include omega();
+	width: 25%;
+	padding: $base-padding;
+}
+=======
+>>>>>>> e335799... style guidance from eric ronnne
+
+	height: 100%;
+	overflow-y: auto;
+<<<<<<< HEAD
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+	padding: $base-padding;
+	position: fixed;
+	width: 25%;
+>>>>>>> e335799... style guidance from eric ronnne
+}
+
+.container-content {
+	@extend .container;
+<<<<<<< HEAD
+<<<<<<< HEAD
+
+	margin-left: 25%;
+	padding: $base-padding;
+	width: 75%;
+=======
+	// @include shift(3);
+	// @include span-columns(9);
+	width: 75%;
+=======
+
+>>>>>>> e335799... style guidance from eric ronnne
+	margin-left: 25%;
+	padding: $base-padding;
+<<<<<<< HEAD
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+	width: 75%;
+>>>>>>> e335799... style guidance from eric ronnne
+}

@@ -1,0 +1,90 @@
+button,
+button a,
+input[type='button'],
+input[type='submit'],
+input[type='reset'] {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  background: $bright-18f;
+=======
+  background: $light-18f;
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+  background: $bright-18f;
+>>>>>>> e335799... style guidance from eric ronnne
+  border: 1px solid $bright-18f;
+  color: $dark-18f;
+
+  &:hover,
+  &:focus {
+    background: $dark-18f;
+    color: $white;
+    border: 1px solid $bright-18f;
+    text-decoration: none;
+
+    a {
+      background: $dark-18f;
+      color: $white;
+      border: 1px solid $bright-18f;
+      text-decoration: none;
+    }
+  }
+}
+
+.button {
+  @extend button;
+}
+
+.button-test {
+  background: $medium-18f;
+  color: $white;
+  border: 1px solid $medium-18f;
+}
+
+.button-delete {
+  background: $dark-18f;
+  color: $white;
+  border: 1px solid $bright-18f;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> e335799... style guidance from eric ronnne
+
+  &:hover,
+  &:focus {
+    background: $red;
+    color: $dark-18f;
+    border: 1px solid $dark-18f;
+  }
+<<<<<<< HEAD
+}
+
+.button-edit {
+
+  object {
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+.test-svg path {
+  stroke: white;
+=======
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+>>>>>>> e335799... style guidance from eric ronnne
+}
+
+.button-edit {
+
+  object {
+    width: 20px;
+    height: 20px;
+  }
+
+}
+
+.test-svg path {
+  stroke: white;
+}

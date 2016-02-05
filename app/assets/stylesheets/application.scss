@@ -1,32 +1,41 @@
-@import "sass/core";
+// Bourban, Neat, Bitters
+@import "core";
 
-.flash {
-  &-error {
-    background-color: $bg-error;
-  }
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+// Presets – variables, colors, mixins
+@import "presets";
 
-  &-notice {
-    background-color: $bg-notice;
-  }
+// Elements – overwrites element styles
+@import "elements";
 
-  color: black;
-  position: fixed;
-  font-weight: bold;
-  width: 96%;
-  margin: 20px;
+// Layouts – grid
+@import "layout/containers";
 
-  p {
-    font-size: 110%;
-    margin: 15px 0;
-  }
-}
+// Components – bundles of styles applied to site components
+=======
+// Base
+@import "base";
 
-.logo-18f {
-  width: 25px;
-  float: left;
-  margin-right: 10px;
-}
+=======
+>>>>>>> 30c1e84... 18f styles
+// Presets
+=======
+// Presets – variables, colors, mixins
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+@import "presets";
 
-.date-time-select {
-    display: inline;
-}
+// Elements – overwrites element styles
+@import "elements";
+
+<<<<<<< HEAD
+// Components
+>>>>>>> 1e283fb... Apply jy-style-fun styles
+=======
+// Layouts – grid
+@import "layout/containers";
+
+// Components – bundles of styles applied to site components
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+@import "components";

@@ -1,40 +1,148 @@
-<header class="filter-area">
-  <h2>Filter</h2>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bd249c1... add header partial
+<%= render :layout => '/application/header', :locals => {:title => 'Employees'} do %>
   <%= form_tag(employees_path, method: "get", class: "navbar-form") do %>
     <div class="input-append">
       <%= text_field_tag :slack_username, params[:slack_username], class: "filter-input", placeholder: "slack username" %>
       <%= text_field_tag :started_on, params[:started_on], class: "filter-input", placeholder: "date started" %>
-      <button class="btn filter-buttom" type="submit"><i class="icon-search"></i>Filter</button>
+      <button class="button filter-button" type="submit"><i class="icon-search"></i>Filter</button>
     </div>
   <% end %>
-</header>
+<% end %>
+<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
   <table>
+=======
+<header class="filter-area">
+  <div class="filter-inputs">
+    <h2>Employees</h2>
+    <%= form_tag(employees_path, method: "get", class: "navbar-form") do %>
+      <div class="input-append">
+        <%= text_field_tag :slack_username, params[:slack_username], class: "filter-input", placeholder: "slack username" %>
+        <%= text_field_tag :started_on, params[:started_on], class: "filter-input", placeholder: "date started" %>
+        <button class="button filter-button" type="submit"><i class="icon-search"></i>Filter</button>
+      </div>
+    <% end %>
+  </div>
+  <div class="filter-logo_container">
+    <h3 class="filter-logo_text">18F Onboarding Bot</h3>
+    <%= image_tag "18F_Logo/PNG/18F-Logo-Bright-L.png", class: "filter-logo" %>
+  </div>
+</header>
+=======
+>>>>>>> bd249c1... add header partial
+
+<<<<<<< HEAD
+<%= render "flashes" -%>
+<table class="main-content">
+>>>>>>> 8f1bce0... accordion, nav list
   <tr>
     <th>Slack username</th>
     <th>Started on</th>
     <th>Time Zone</th>
-    <th></th>
-    <th></th>
+    <th class="column-buttons"></th>
+    <th class="column-wide"></th>
   </tr>
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
 
-  <% @employees.each do |employee| %>
+<section class="main-content">
+  <%= render "flashes" -%>
+
+  <table>
     <tr>
+<<<<<<< HEAD
+=======
+
+<section class="main-content">
+  <%= render "flashes" -%>
+
+  <table>
+    <tr>
+>>>>>>> 86338a7... flashes
+      <th>Slack username</th>
+      <th>Started on</th>
+      <th>Time Zone</th>
+      <th class="column-buttons"></th>
+      <th class="column-wide"></th>
+<<<<<<< HEAD
+=======
       <td><%= employee.slack_username %></td>
       <td><%= employee.started_on %></td>
       <td><%= employee.time_zone %></td>
-      <td><%= link_to "Edit", edit_employee_path(employee) %></td>
+      <td><%= link_to "Edit", edit_employee_path(employee), class: 'button' %></td>
       <td><%= link_to "Delete",
         { action: :destroy, id: employee.id },
         method: :delete,
+        class: 'button button-delete',
         data: { confirm: "Are you sure you want to delete @#{employee.slack_username}?" }
-        %></td>
+        %></button></td>
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+>>>>>>> 86338a7... flashes
     </tr>
+
+    <% @employees.each do |employee| %>
+      <tr>
+        <td><%= employee.slack_username %></td>
+        <td><%= employee.started_on %></td>
+        <td><%= employee.time_zone %></td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <td>
+          <%= link_to edit_employee_path(employee), class: 'button button-edit' do %>
+            <icon class="icon-edit"></icon>
+=======
+        <td>
+          <%= link_to edit_employee_path(employee), class: 'button button-edit' do %>
+<<<<<<< HEAD
+            <!-- <icon class="icon-edit"></icon> -->
+>>>>>>> 102dbd3... include test path
+=======
+            <icon class="icon-edit"></icon>
+>>>>>>> 88c2078... starter fonts
+            <span>Edit</span>
+          <% end %>
+        </td>
+        <td>
+<<<<<<< HEAD
+          <a class="button button-delete" data-confirm="Are you sure you want to delete @#{employee.slack_username}?" rel="nofollow" data-method="delete" href="/employees/#{employee.id}">
+<<<<<<< HEAD
+<<<<<<< HEAD
+            <icon class="icon-circle-x"></icon>
+            Delete
+          </a>
+        </td>
+=======
+        <td><%= link_to "Edit", edit_employee_path(employee), class: 'button' %></td>
+        <td><%= link_to "Delete",
+          { action: :destroy, id: employee.id },
+          method: :delete,
+          class: 'button button-delete',
+          data: { confirm: "Are you sure you want to delete @#{employee.slack_username}?" }
+          %></button></td>
+>>>>>>> 86338a7... flashes
+=======
+            <!-- <icon class="icon-x"></icon> -->
+=======
+=======
+          <a class="button button-delete" data-confirm="Are you sure you want to delete @<%= employee.slack_username %>?" rel="nofollow" data-method="delete" href="/employees/<%= employee.id %>">
+>>>>>>> 7b3ff79... all tests passed
+            <icon class="icon-circle-x"></icon>
+>>>>>>> 88c2078... starter fonts
+            Delete
+          </a>
+        </td>
+>>>>>>> 102dbd3... include test path
+      </tr>
+    <% end %>
+  </table>
+  <% if @employees.empty? %>
+    <label>No matches found.</label>
   <% end %>
-</table>
-<% if @employees.empty? %>
-  <label>No matches found.</label>
-<% end %>
 
-<%= paginate(@employees) %>
-
+  <%= paginate(@employees) %>
+</section>

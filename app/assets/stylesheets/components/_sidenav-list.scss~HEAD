@@ -1,0 +1,97 @@
+/*
+  Adapted from US Web Design Standards
+  https://playbook.cio.gov/designstandards
+*/
+
+$sidenav-padding: 1rem 1rem 1rem 1.8rem;
+
+.sidenav-list {
+
+  li {
+    border-top: 1px solid $dark-18f;
+
+    &:first-child {
+      border-top: none;
+    }
+
+  }
+
+  a {
+    @include font-nimbus('regular');
+
+    border: none;
+    color: $dark-18f;
+    display: block;
+    line-height: 1;
+    padding: $sidenav-padding;
+
+    &:hover {
+      background-color: $dark-18f;
+      color: $white;
+      text-decoration: none;
+    }
+
+    &:focus {
+      position: relative;
+      z-index: 1;
+    }
+
+    &.current {
+      background-color: $light-18f;
+      color: $dark-18f;
+      font-weight: $weight-bold;
+      border-left: 4px solid $dark-18f;
+      padding-left: 1.4rem;
+    }
+  }
+}
+
+.sidenav-sub_list {
+  margin: 0;
+  width: 100%;
+
+  li {
+    border: none;
+  }
+
+  a:hover,
+  a.current {
+    border: none;
+  }
+}
+
+.sidenav-sub_list {
+  margin-bottom: $base-padding;
+}
+
+.sidenav-sub_list li a {
+  padding-left: $base-padding-extra;
+}
+
+.sidenav-sub_list li.current {
+  @include font-nimbus('bold');
+
+  a {
+    @include font-nimbus('bold');
+  }
+}
+
+.sidenav-list_title {
+  @include font-nimbus('regular');
+
+  border-radius: 0;
+  letter-spacing: 1px;
+  padding: $sidenav-padding;
+  text-align: left;
+  width: 100%;
+
+  &[aria-expanded='true'],
+  &:focus {
+    @include font-nimbus('bold');
+
+    background-color: transparent;
+    border-left: 4px solid $dark-18f;
+    color: $dark-18f;
+    outline: 1px;
+  }
+}

@@ -1,0 +1,60 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  @include font-nimbus('regular');
+
+=======
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+	@include font-nimbus('regular');
+=======
+  @include font-nimbus('regular');
+>>>>>>> 3abc053... spaces
+
+>>>>>>> c5c0b95... Add nimbus font
+  line-height: normal;
+  margin-top: 0;
+}
+
+h1 {
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+  @include font-nimbus('bold');
+
+  font-size: 1.5em;
+=======
+  font-size: 2em;
+=======
+  font-size: 1.5em;
+<<<<<<< HEAD
+>>>>>>> 67a9bea... redo banner structure
+  font-weight: 300;
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+  font-weight: 600;
+>>>>>>> e335799... style guidance from eric ronnne
+=======
+	@include font-nimbus('bold');
+=======
+  @include font-nimbus('bold');
+>>>>>>> 3abc053... spaces
+
+  font-size: 1.5em;
+>>>>>>> c5c0b95... Add nimbus font
+  letter-spacing: 1px;
+  margin: 0 0 0.4em;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: 300;
+  letter-spacing: 1px;
+}

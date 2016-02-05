@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'dolores';
+    src: font-url('/assets/dolores/dolores.eot');
+    src: font-url('/assets/dolores/dolores.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/dolores/dolores.woff') format('woff'),
+         font-url('/assets/dolores/dolores.ttf') format('truetype'),
+         font-url('/assets/dolores/dolores.svg#dolores') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*='icon-']:before{
+  display: inline-block;
+  font-family: 'dolores';
+  font-size: 1em;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  margin-right: 5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.icon-x:before {
+    content: "\e901";
+}
+.icon-contacts:before {
+    content: "\e902";
+}
+.icon-send:before {
+    content: "\e903";
+}
+.icon-circle-x:before {
+    content: "\e904";
+}
+.icon-circle-minus:before {
+    content: "\e905";
+}
+.icon-circle-plus:before {
+    content: "\e906";
+}
+.icon-edit:before {
+    content: "\e900";
+}
+
+@font-face {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    font-family: 'dolores';
+    src: font-url('/assets/dolores/dolores.eot');
+    src: font-url('/assets/dolores/dolores.eot?#iefix') format('embedded-opentype'),
+         font-url('/assets/dolores/dolores.woff') format('woff'),
+         font-url('/assets/dolores/dolores.ttf') format('truetype'),
+         font-url('/assets/dolores/dolores.svg#dolores') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*='icon-']:before{
+  display: inline-block;
+   font-family: 'dolores';
+   font-size: 1em;
+   font-style: normal;
+   font-weight: normal;
+   line-height: 1;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale
+}
+
+.icon-x:before {
+    content: "\e901";
+}
+.icon-contacts:before {
+    content: "\e902";
+}
+.icon-send:before {
+    content: "\e903";
+}
+.icon-circle-x:before {
+    content: "\e904";
+}
+.icon-circle-minus:before {
+    content: "\e905";
+}
+.icon-circle-plus:before {
+    content: "\e906";
+}
+.icon-edit:before {
+    content: "\e900";
+}
+
+
+@font-face {
+  font-family: 'Nimbus Sans-regular';
+=======
+  font-family: '18F_Nimbus-regular';
+>>>>>>> c5c0b95... Add nimbus font
+=======
+  font-family: 'Nimbus Sans-regular';
+>>>>>>> 8f1bce0... accordion, nav list
+  src: font-url('/assets/18F_Nimbus/18FNimbusSansL-regular.ttf') format('truetype');
+}
+
+@font-face {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: 'Nimbus Sans-bold';
+=======
+  font-family: '18F_Nimbus-bold';
+>>>>>>> c5c0b95... Add nimbus font
+=======
+  font-family: 'Nimbus Sans-bold';
+>>>>>>> 8f1bce0... accordion, nav list
+  src: font-url('/assets/18F_Nimbus/18FNimbusSansL-bold.ttf') format('truetype');
+}
+
+@font-face {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  font-family: 'Nimbus Sans-italic';
+  src: font-url('/assets/18F_Nimbus/18FNimbusSansL-italic.ttf') format('truetype');
+}
+
+$nimbus-bold: 'Nimbus Sans-bold', $helvetica;
+$nimbus-italic: 'Nimbus Sans-italic', $helvetica;
+$nimbus-regular: 'Nimbus Sans-regular', $helvetica;
+=======
+  font-family: '18F_Nimbus-italic';
+  src: font-url('/assets/18F_Nimbus/18FNimbusSansL-italic.ttf') format('truetype');
+}
+
+$nimbus-bold: '18F_Nimbus-bold', $helvetica;
+$nimbus-italic: '18F_Nimbus-italic', $helvetica;
+$nimbus-regular: '18F_Nimbus-regular', $helvetica;
+>>>>>>> c5c0b95... Add nimbus font
+=======
+  font-family: 'Nimbus Sans-italic';
+  src: font-url('/assets/18F_Nimbus/18FNimbusSansL-italic.ttf') format('truetype');
+}
+
+$nimbus-bold: 'Nimbus Sans-bold', $helvetica;
+$nimbus-italic: 'Nimbus Sans-italic', $helvetica;
+$nimbus-regular: 'Nimbus Sans-regular', $helvetica;
+>>>>>>> 8f1bce0... accordion, nav list
+
+@mixin font-nimbus($style) {
+	@if $style == bold {
+    font-family: $nimbus-bold;
+<<<<<<< HEAD
+<<<<<<< HEAD
+    letter-spacing: 1px;
+  } @else if $style == italic {
+    font-family: $nimbus-italic;
+  } @else {
+  	font-family: $nimbus-regular;
+    font-weight: 200;
+=======
+  }
+
+  @if $style == italic {
+=======
+    letter-spacing: 1px;
+  } @else if $style == italic {
+>>>>>>> 8f1bce0... accordion, nav list
+    font-family: $nimbus-italic;
+  } @else {
+  	font-family: $nimbus-regular;
+<<<<<<< HEAD
+>>>>>>> c5c0b95... Add nimbus font
+=======
+    font-weight: 200;
+>>>>>>> b5829b5... sidenav spruce
+  }
+}
+

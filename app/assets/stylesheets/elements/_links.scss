@@ -1,0 +1,28 @@
+a {
+<<<<<<< HEAD
+<<<<<<< HEAD
+  color: $dark-18f;
+
+  &:hover,
+  &:focus {
+    color: $medium-18f;
+  }
+=======
+	color: $dark-18f;
+
+	&:hover,
+	&:focus {
+		color: $medium-18f;
+		text-decoration: underline;
+	}
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+  color: $dark-18f;
+
+  &:hover,
+  &:focus {
+    color: $medium-18f;
+    text-decoration: underline;
+  }
+>>>>>>> 3abc053... spaces
+}

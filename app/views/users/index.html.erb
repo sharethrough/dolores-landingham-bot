@@ -1,16 +1,64 @@
-<h2>Dolores users</h2>
-  <table>
-  <tr>
-    <th>Email</th>
-    <th>Admin</th>
-    <th></th>
-  </tr>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<%= render 'header', :title => 'Dolores Users' %>
 
-  <% @users.each do |user| %>
-      <tr>
-        <td><%= user.email %></td>
-        <td><%= user.admin? %></td>
-        <td><%= link_to "Edit", edit_user_path(user) %></td>
-      </tr>
-  <% end %>
-</table>
+<section class="main-content">
+  <%= render "flashes" -%>
+<<<<<<< HEAD
+=======
+<header class="filter-area">
+  <div class="filter-inputs">
+    <h2>Dolores Users</h2>
+  </div>
+  <div class="filter-logo_container">
+    <h3 class="filter-logo_text">18F Onboarding Bot</h3>
+    <%= image_tag "18F_Logo/PNG/18F-Logo-Bright-L.png", class: "filter-logo" %>
+  </div>
+</header>
+=======
+<%= render 'header', :title => 'Dolores Users' %>
+>>>>>>> bd249c1... add header partial
+
+<div class="main-content">
+>>>>>>> f944ce4... rebase new admin changes
+=======
+>>>>>>> 86338a7... flashes
+  <table>
+    <tr>
+      <th>Email</th>
+      <th>Admin</th>
+      <th></th>
+    </tr>
+
+    <% @users.each do |user| %>
+        <tr>
+          <td><%= user.email %></td>
+          <td><%= user.admin? %></td>
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 88c2078... starter fonts
+          <td>
+            <%= link_to edit_user_path(user), class: 'button button-edit' do %>
+              <icon class="icon-edit"></icon>
+              <span>Edit</span>
+            <% end %>
+          </td>
+<<<<<<< HEAD
+        </tr>
+    <% end %>
+  </table>
+</section>
+=======
+          <td><%= link_to "Edit", edit_user_path(user) %></td>
+=======
+>>>>>>> 88c2078... starter fonts
+        </tr>
+    <% end %>
+  </table>
+<<<<<<< HEAD
+</div>
+>>>>>>> f944ce4... rebase new admin changes
+=======
+</section>
+>>>>>>> 86338a7... flashes

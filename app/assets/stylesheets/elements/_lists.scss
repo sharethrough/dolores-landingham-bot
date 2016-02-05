@@ -1,0 +1,28 @@
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 8f1bce0... accordion, nav list
+
+  li {
+    display: list-item;
+    margin: 0;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      display: none;
+    }
+  }
+<<<<<<< HEAD
+=======
+>>>>>>> a7105fd... reconfigure scss structure, add 18f brand colors, favicon
+=======
+>>>>>>> 8f1bce0... accordion, nav list
+}
